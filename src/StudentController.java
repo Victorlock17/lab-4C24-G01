@@ -1,7 +1,15 @@
-public class StudentController{
+public class StudentController {
 
-    public void controller(){
-        // TO DO
+    private StudentModel model;
+    private StudentView view;
+
+    public StudentController(StudentModel model, StudentView view) {
+        this.model = model;
+        this.view = view;
+    }
+
+    public void controller() {
+        view.show(model.getName());
     }
 
 }
